@@ -27,13 +27,13 @@ open class MessageComposerViewModel: NSObject, MessageComposerViewModelProtocol 
     var message: BaseMessage?
     var typingIndicator: TypingIndicator?
     
-    init(user: User) {
+    public init(user: User) {
         super.init()
         self.user = user
         setTypingIndicator()
     }
     
-    init(group: Group) {
+    public init(group: Group) {
         super.init()
         self.group = group
         setTypingIndicator()
