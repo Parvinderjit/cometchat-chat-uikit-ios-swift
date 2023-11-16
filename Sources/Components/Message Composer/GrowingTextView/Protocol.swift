@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc protocol GrowingTextViewDelegate: NSObjectProtocol {
+@objc public protocol GrowingTextViewDelegate: NSObjectProtocol {
     @objc optional func growingTextViewShouldBeginEditing(_ growingTextView: GrowingTextView) -> Bool
     @objc optional func growingTextViewShouldEndEditing(_ growingTextView: GrowingTextView) -> Bool
 

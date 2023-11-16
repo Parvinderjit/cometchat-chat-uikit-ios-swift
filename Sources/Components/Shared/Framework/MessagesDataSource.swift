@@ -10,7 +10,7 @@ import CometChatSDK
 import UIKit
 
 public class MessagesDataSource: DataSource {
-
+    public init() {} 
     public func getEditOption(controller: UIViewController?) -> CometChatMessageOption {
         return CometChatMessageOption(id: MessageOptionConstants.editMessage, title: "EDIT_MESSAGE".localize(), icon: AssetConstants.edit)
     }

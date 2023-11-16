@@ -81,12 +81,12 @@ extension CometChatMessageInput: GrowingTextViewDelegate {
         }
     }
     
-    func growingTextViewShouldBeginEditing(_ growingTextView: GrowingTextView) -> Bool {
+    public func growingTextViewShouldBeginEditing(_ growingTextView: GrowingTextView) -> Bool {
         shouldBeginEditing?(true)
         return true
     }
     
-    func growingTextViewShouldEndEditing(_ growingTextView: GrowingTextView) -> Bool {
+    public func growingTextViewShouldEndEditing(_ growingTextView: GrowingTextView) -> Bool {
         shouldEndEditing?(true)
         return true
     }

@@ -59,6 +59,8 @@ import CometChatSDK
     private (set) var hideFooterView = true
     private (set) var messagesRequestBuilder: MessagesRequest.MessageRequestBuilder? = nil
     
+    public var disableCellItemContextMenu = false
+    
     public override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
         commonInit()

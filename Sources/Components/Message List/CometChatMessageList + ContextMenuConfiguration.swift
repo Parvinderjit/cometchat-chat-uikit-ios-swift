@@ -23,6 +23,7 @@ extension CometChatMessageList {
     }
 
     public func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        if disableCellItemContextMenu { return nil }
         guard let message = viewModel?.messages[safe: indexPath.section]?.messages[safe: indexPath.row] else {
             return nil
         }
