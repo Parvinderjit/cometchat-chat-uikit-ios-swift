@@ -179,7 +179,8 @@ public class CometChatMessageBubble: UITableViewCell {
         self.viewReplies.subviews.forEach({ $0.removeFromSuperview() })
         self.replyView.subviews.forEach({ $0.removeFromSuperview() })
         self.bubbleContainerView.subviews.forEach( { $0.removeFromSuperview() })
-      }
+        set(bubbleView: nil)
+    }
     
     public func build() {
         // Configuring avatar

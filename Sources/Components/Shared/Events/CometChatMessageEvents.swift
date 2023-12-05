@@ -41,96 +41,96 @@ public class CometChatMessageEvents {
         self.observer.removeValue(forKey: id)
     }
     
-    internal static  func emitOnMessageSent(message: BaseMessage, status: MessageStatus) {
+    public static  func emitOnMessageSent(message: BaseMessage, status: MessageStatus) {
         print("self.observer: \(self.observer)")
         self.observer.forEach({
             (key,observer) in
             observer.onMessageSent(message: message, status: status)
         })
     }
-    internal static  func emitOnMessageEdit(message: BaseMessage, status: MessageStatus) {
+    public static  func emitOnMessageEdit(message: BaseMessage, status: MessageStatus) {
         self.observer.forEach({
             (key,observer) in
             observer.onMessageEdit(message: message, status: status)
         })
     }
-    internal static  func emitOnMessageDelete(message: BaseMessage) {
+    public static  func emitOnMessageDelete(message: BaseMessage) {
         self.observer.forEach({
             (key,observer) in
             observer.onMessageDelete(message: message)
         })
     }
-    internal static  func emitOnMessageReply(message: BaseMessage, status: MessageStatus) {
+    public static  func emitOnMessageReply(message: BaseMessage, status: MessageStatus) {
         self.observer.forEach({
             (key,observer) in
             observer.onMessageReply(message: message, status: status)
         })
         
     }
-    internal static  func emitOnMessageRead(message: BaseMessage) {
+    public static  func emitOnMessageRead(message: BaseMessage) {
         self.observer.forEach({
             (key,observer) in
             observer.onMessageRead(message: message)
         })
     }
     
-    internal static  func emitOnLiveReaction(reaction: TransientMessage) {
+    public static  func emitOnLiveReaction(reaction: TransientMessage) {
         self.observer.forEach({
             (key,observer) in
             observer.onLiveReaction(reaction: reaction)
         })
     }
     
-    internal static  func emitOnVoiceCall(user: User) {
+    public static  func emitOnVoiceCall(user: User) {
         self.observer.forEach({
             (key,observer) in
             observer.onVoiceCall(user: user)
         })
     }
-    internal static  func emitOnVoiceCall(group: Group) {
+    public static  func emitOnVoiceCall(group: Group) {
         self.observer.forEach({
             (key,observer) in
             observer.onVoiceCall(group: group)
         })
     }
-    internal static  func emitOnVideoCall(user: User) {
+    public static  func emitOnVideoCall(user: User) {
         self.observer.forEach({
             (key,observer) in
             observer.onVideoCall(user: user)
         })
     }
-    internal static  func emitOnVideoCall(group: Group) {
+    public static  func emitOnVideoCall(group: Group) {
         self.observer.forEach({
             (key,observer) in
             observer.onVideoCall(group: group)
         })
     }
-    internal static  func emitOnViewInformation(user: User) {
+    public static  func emitOnViewInformation(user: User) {
         self.observer.forEach({
             (key,observer) in
             observer.onViewInformation(user: user)
         })
     }
-    internal static  func emitOnViewInformation(group: Group) {
+    public static  func emitOnViewInformation(group: Group) {
         self.observer.forEach({
             (key,observer) in
             observer.onViewInformation(group: group)
         })
     }
-    internal static  func emitOnError(message: BaseMessage?, error: CometChatException) {
+    public static  func emitOnError(message: BaseMessage?, error: CometChatException) {
         self.observer.forEach({
             (key,observer) in
             observer.onError(message: message, error: error)
         })
     }
-    internal static  func emitOnMessageReact(message: BaseMessage, reaction: CometChatMessageReaction) {
+    public static  func emitOnMessageReact(message: BaseMessage, reaction: CometChatMessageReaction) {
         self.observer.forEach({
             (key,observer) in
             observer.onMessageReact(message: message, reaction: reaction)
         })
     }
     
-    internal static  func emitOnParentMessageUpdate(message: BaseMessage) {
+    public static  func emitOnParentMessageUpdate(message: BaseMessage) {
         self.observer.forEach({
             (key,observer) in
             observer.onParentMessageUpdate(message: message)

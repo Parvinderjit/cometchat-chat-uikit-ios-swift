@@ -439,10 +439,10 @@ extension CometChatMessageList: UITableViewDelegate, UITableViewDataSource {
                         bubbleContainer.addArrangedSubview(bubbleView)
                         cell.set(bubbleView: bubbleContainer)
                     } else {
+                        
                         if let headerView = template.headerView?(message, cell.alignment, controller) {
                             cell.headerView.addArrangedSubview(headerView)
                             cell.topStackView.translatesAutoresizingMaskIntoConstraints = false
-                            cell.topStackView.heightAnchor.constraint(equalToConstant: headerView.frame.height).isActive = true
                         } else {
                             
                             let nameLabel = UILabel()
@@ -525,7 +525,7 @@ extension CometChatMessageList: UITableViewDelegate, UITableViewDataSource {
                                 if !isLoggedInUser && showAvatar {
                                     cell.hide(avatar: false)
                                 } else {
-                                    cell.hide(headerView: true)
+                                    cell.hide(avatar: true)
                                 }
                             case .user where alignment == .leftAligned, .group where alignment == .leftAligned:
                                 if showAvatar {
@@ -534,6 +534,8 @@ extension CometChatMessageList: UITableViewDelegate, UITableViewDataSource {
                             case .group, .user:
                                 if showAvatar {
                                     cell.hide(avatar: false)
+                                } else {
+                                    cell.hide(avatar: true)
                                 }
                             @unknown default: break
                             }

@@ -117,7 +117,9 @@ public class MessagesDataSource: DataSource {
     
     public func getTextMessageTemplate() -> CometChatMessageTemplate {
         return CometChatMessageTemplate(category: MessageCategoryConstants.message, type: MessageTypeConstants.text, contentView: { message, alignment, controller in
-            guard let textMessage = message as? TextMessage else { return UIView() }
+            guard let textMessage = message as? TextMessage else {
+                return UIView()
+            }
             if (textMessage.deletedAt != 0.0) {
                 if let deletedBubble = self.getDeleteMessageBubble(messageObject: textMessage) {
                     return deletedBubble
@@ -436,7 +438,7 @@ public class MessagesDataSource: DataSource {
         } else {
             switch alignment {
             case .right:
-                textBubble.set(textColor: .white)
+                textBubble.set(textColor: CometChatTheme.palatte.accent1)
             case .left:
                 textBubble.set(textColor: CometChatTheme.palatte.accent)
             default: break

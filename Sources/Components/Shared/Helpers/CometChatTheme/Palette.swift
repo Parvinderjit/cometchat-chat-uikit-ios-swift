@@ -18,6 +18,8 @@ public class Palette {
     public private(set) var success: UIColor =  UIColor(named: "success", in: Bundle.module, compatibleWith: nil) ?? .gray
     public private(set) var accent: UIColor =  UIColor(named: "accent", in: Bundle.module, compatibleWith: nil) ?? .gray
     
+    public var accent1: UIColor =  .white
+    
     var accent50: UIColor {
         get { accent.withAlphaComponent(0.04) }
         set { self.accent50 = newValue }
